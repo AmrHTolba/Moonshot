@@ -10,5 +10,5 @@ import Foundation
 struct Astronaut: Identifiable, Codable {
     let id: String
     let name: String
-    let mission: String
+    let description: String
 }
