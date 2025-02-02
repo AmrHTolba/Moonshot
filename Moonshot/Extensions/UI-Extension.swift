@@ -17,3 +17,10 @@ extension ShapeStyle where Self == Color {
             Color(red: 0.2, green: 0.2, blue: 0.3)
         }
 }
+
+
+extension Rectangle  {
+    func line() -> some View {
+        return Rectangle().frame(height: 2).foregroundStyle(.lightBackground).padding(.vertical)
+    }
+}

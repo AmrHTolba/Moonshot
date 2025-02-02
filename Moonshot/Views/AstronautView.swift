@@ -13,13 +13,18 @@ struct AstronautView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(alignment: .leading) {
                 Image(astronaut.id)
                     .resizable()
                     .scaledToFit()
-
+                Rectangle().line()
+                Text("Background Information")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
+                    .padding(.bottom)
+                
                 Text(astronaut.description)
-                    
                     .foregroundStyle(.white)
             }
             .padding()
