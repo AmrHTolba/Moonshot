@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct MissionView: View {
+    // MARK: - Variables
     
     let mission: Mission
     let crew: [CrewMember]
     
-    //  Initializer 
+    // MARK: - Initializer
+    
     init(mission: Mission, astronauts: [String: Astronaut]) {
         self.mission = mission
         self.crew = mission.crew.map{ member in
@@ -23,6 +25,8 @@ struct MissionView: View {
             }
         }
     }
+    
+    // MARK: - Body
     
     var body: some View {
         ScrollView {
@@ -63,7 +67,7 @@ struct MissionView: View {
                     HStack {
                         ForEach(crew, id: \.role) { crewMember in
                             NavigationLink {
-                                Text("Astronaut Detail")
+                                AstronautView(astronaut: crewMember.astronaut)
                             } label : {
                                 HStack {
                                     Image(crewMember.astronaut.id)
@@ -97,7 +101,7 @@ struct MissionView: View {
     }
 }
 
-    // Get the data of the astronauts of the trip
+    // Setup Crew Model
 struct CrewMember {
     let role: String
     let astronaut: Astronaut
