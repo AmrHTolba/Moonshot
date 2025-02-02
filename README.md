@@ -15,4 +15,4 @@ Moonshot is a SwiftUI-based iOS app that provides detailed insights into NASA’
 - **Custom Styling** – Unique design with background colors and shadows  
 
 ## Preview
-![](https://github.com/AmrHTolba/Moonshot/blob/main/2025-02-02%2022.05.32.gif)
+![](https://github.com/AmrHTolba/Moonshot/blob/main/moonshot_preview.gif)
